@@ -1,1 +1,19 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../scss/partials/footer";
+@import "../scss/partials/variables";
+@import "../scss/partials/header";
+
+
+//import functions & variables
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+    "dark-blue": #082645,
+    "light-blue": #CFE8F9,
+    "orange": #FF9D00, 
+);
+
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+// Import Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
