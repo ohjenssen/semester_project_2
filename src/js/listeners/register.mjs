@@ -7,8 +7,7 @@ export function setRegisterFormListener(){
     if(form){
         form.addEventListener("submit", (event) => {
             event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
+            const formData = new FormData(event.target);
             const userInfo = Object.fromEntries(formData.entries());
             
             authenticate.registerUser(userInfo);
