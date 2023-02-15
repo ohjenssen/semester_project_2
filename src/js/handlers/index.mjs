@@ -1,0 +1,1 @@
+export { setRegisterFormListener } from "./register.mjs";

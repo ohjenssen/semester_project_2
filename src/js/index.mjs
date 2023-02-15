@@ -1,6 +1,4 @@
-import * as api from "./api/index.mjs";
-
-api.registerUser();
+import { setRoute } from "./routes.mjs";
 
 const path = location.pathname;
-console.log(path)
+setRoute(path);
