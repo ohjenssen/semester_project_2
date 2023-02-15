@@ -46,39 +46,54 @@
             </nav>
         </header>
         <body>
-            <div class="container">
 
-                <form class="login is-valid p-3 mt-5 p-md-4 rounded-3 mx-auto" id="registerForm">
+            <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+                <form class="register is-valid p-3 mt-5 p-md-4 rounded-3 mx-auto" id="registerForm">
                     <h1 class="mt-5">Register user</h1>
+                    <p>Required *<p>
                     <div class="mb-4 mt-4">
-                        <label for="username" class="form-label">* Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="JohnDoe" name="name" required>
+                        <label for="username" class="form-label">Username *</label>
+                        <div class="d-flex input-container">
+                            <input type="text" class="form-control" id="username" placeholder="JohnDoe" name="name" required>
+                            <i class="bi bi-person-circle"></i>
+                        </div>
                         <div class="valid-feedback">Valid.</div>
                         <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="mb-4 mt-4">
-                        <label for="email" class="form-label">* Email (valid stud.noroff.no or noroff.no email)</label>
-                        <input type="email" class="form-control" id="email" placeholder="johndoe@stud.noroff.no" name="email" required>
+                        <label for="email" class="form-label">Email * (stud.noroff.no or noroff.no email)</label>
+                        <div class="d-flex input-container">
+                            <input type="email" class="form-control" id="email" placeholder="johndoe@stud.noroff.no" name="email" required>
+                            <i class="bi bi-envelope-at-fill"></i>
+                        </div>
                         <div class="valid-feedback">Valid.</div>
                         <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
                     <div class="mb-3 mt-4">
-                        <label for="password" class="form-label">* Password (at least 8 characters)</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                        <label for="password" class="form-label">Password * (min. 8 characters)</label>
+                        <div class="d-flex input-container">
+                            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                            <i class="bi bi-key-fill"></i>
+                        </div>
                     </div>
                     <div class="mb-3 mt-4">
                         <label for="avatar" class="form-label">Avatar (must be an imagelink)</label>
-                        <input type="text" class="form-control" id="avatar" placeholder="https://img.service.com/avatar.jpg" name="avatar">
+                        <div class="d-flex input-container">
+                            <input type="text" class="form-control" id="avatar" placeholder="https://img.service.com/avatar.jpg" name="avatar">
+                            <i class="bi bi-card-image"></i>
+                        </div>
                     </div>
                     <div class="d-grid gap-2">
                         <button type="submit" class="btn btn-orange fs-3 shadow">REGISTER</button>
                     </div>
+                    <p class="mt-3" id="errorTag"></p>
                 </form> 
-
             </div>
+                
         </body>
             
     </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" type="module"></script>
 </body>
 </html>
