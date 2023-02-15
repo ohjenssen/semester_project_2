@@ -9,10 +9,76 @@
     <title>Register</title>
 </head>
 <body>
-  <div class="container">
+    <div class="container">
 
+        <header class="fixed-top">
+            <nav class="navbar navbar-expand-lg bg-dark-blue">
+                <div class="container-fluid">
 
-  </div>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                    <a class="navbar-brand" href="/"><img src="/assets/logos/logo_light_blue.png" class="logo"></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarToggler">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="../browse/">Browse</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex me-4 mb-2" id="searchForm">
+                            <div class="input-group">
+                                <button type="submit" class="input-group-text"><i class="bi bi-search text-dark-blue"></i></button>
+                                <input type="text" id="searchInput" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                        <div class="text-start mb-2">
+                            <a type="button" href="../login/" class="btn btn-outline-light me-2">LOGIN</a>
+                            <a type="button" href="#" class="btn btn-orange">REGISTER</a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <body>
+            <div class="container">
+
+                <form class="login is-valid p-3 mt-5 p-md-4 rounded-3 mx-auto" id="registerForm">
+                    <h1 class="mt-5">Register user</h1>
+                    <div class="mb-4 mt-4">
+                        <label for="username" class="form-label">* Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="JohnDoe" name="name" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="mb-4 mt-4">
+                        <label for="email" class="form-label">* Email (valid stud.noroff.no or noroff.no email)</label>
+                        <input type="email" class="form-control" id="email" placeholder="johndoe@stud.noroff.no" name="email" required>
+                        <div class="valid-feedback">Valid.</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="password" class="form-label">* Password (at least 8 characters)</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+                    </div>
+                    <div class="mb-3 mt-4">
+                        <label for="avatar" class="form-label">Avatar (must be an imagelink)</label>
+                        <input type="text" class="form-control" id="avatar" placeholder="https://img.service.com/avatar.jpg" name="avatar">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-orange fs-3 shadow">REGISTER</button>
+                    </div>
+                </form> 
+
+            </div>
+        </body>
+            
+    </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
