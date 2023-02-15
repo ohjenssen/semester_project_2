@@ -12,13 +12,12 @@ export async function registerUser(profileData){
     })
 
     const json = await response.json();
-    const errorMessage = json.errors[0].message;
-
+    
     if(response.ok){
         window.location.replace("../login/")
     } else if(!response.ok){
+        const errorMessage = json.errors[0].message;
         const pTag = document.querySelector("#errorTag");
         pTag.innerHTML = errorMessage;
     }
-
 }
