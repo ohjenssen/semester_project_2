@@ -1,14 +1,18 @@
-#registerForm {
+#registerForm,  #loginForm{
+    min-width: 300px;
     max-width: 400px;
 }
 
-#registerForm div .form-control {
+#registerForm div .form-control,  #loginForm div .form-control{
     border: none;
-    border-bottom: 3px solid $secondary;
     border-radius: 0;
     padding: 0;
 }
 
-#registerForm div label {
+#registerForm div .input-container, #loginForm div .input-container {
+    border-bottom: 3px solid $secondary;
+}
+
+#registerForm div label, #loginForm div label {
     font-weight: bold;
 }
