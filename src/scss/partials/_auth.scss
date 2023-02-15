@@ -1,0 +1,14 @@
+#registerForm {
+    max-width: 400px;
+}
+
+#registerForm div .form-control {
+    border: none;
+    border-bottom: 3px solid $secondary;
+    border-radius: 0;
+    padding: 0;
+}
+
+#registerForm div label {
+    font-weight: bold;
+}
