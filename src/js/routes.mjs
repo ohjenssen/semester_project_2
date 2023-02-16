@@ -12,5 +12,6 @@ export function setRoute(path){
     }
 
     listeners.checkLoginStatus();
+    listeners.logout();
 
 }
