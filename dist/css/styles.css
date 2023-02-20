@@ -32,6 +32,10 @@
   font-weight: bold;
 }
 
+#errorTag {
+  color: red;
+}
+
 footer .logo {
   max-width: 150px;
 }
