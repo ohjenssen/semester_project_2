@@ -33,7 +33,7 @@ export function userProfileAvatar(){
     const aTag = document.createElement("a");
     aTag.className = "me-2";
     aTag.innerHTML = "<img>";
-    aTag.href = "";
+    aTag.href = "/pages/profilePage";
     aTag.id = "profileAvatar";
 
     aTag.querySelector("img").alt = "profile image";
