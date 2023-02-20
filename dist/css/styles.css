@@ -1,4 +1,27 @@
 @charset "UTF-8";
+#avatarContainer {
+  background-color: #DBB12A;
+  height: 200px;
+}
+
+#avatar {
+  width: 150px;
+  z-index: 1;
+}
+
+#editAvatarBtn {
+  z-index: 1;
+}
+
+#nameContainer {
+  margin-top: 130px;
+  padding-right: 5px;
+}
+
+#profileInfoContainer {
+  background-color: #e6e5e1;
+}
+
 #scrollBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
