@@ -9,6 +9,11 @@ export function setRoute(path){
         case "/pages/login/":
             listeners.setLoginFormListener();
             break;
+
+        case "/":
+            listeners.setLandingPage();
+            window.onscroll = function() {listeners.scrollFunction()};
+            break;
     }
 
     listeners.checkLoginStatus();
