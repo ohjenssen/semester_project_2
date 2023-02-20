@@ -14,6 +14,10 @@ export function setRoute(path){
             listeners.setLandingPage();
             window.onscroll = function() {listeners.scrollFunction()};
             break;
+
+        case "/pages/profilePage/":
+            listeners.setProfilePage();
+            break;
     }
 
     listeners.checkLoginStatus();
