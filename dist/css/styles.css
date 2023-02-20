@@ -1,4 +1,18 @@
 @charset "UTF-8";
+#scrollBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 60px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  font-size: 18px; /* Increase font size */
+}
+
+@media screen and (max-width: 480px) {
+  #scrollBtn {
+    display: none;
+  }
+}
 #registerForm, #loginForm {
   min-width: 300px;
   max-width: 400px;
@@ -11058,10 +11072,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.container {
-  max-width: 900px;
-}
-
 body {
   font-family: Helvetica, sans-serif;
 }
@@ -11069,6 +11079,10 @@ body {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: bold;
+}
+
+.container {
+  max-width: 900px;
 }
 
 /*# sourceMappingURL=styles.css.map */

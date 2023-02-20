@@ -9,17 +9,17 @@
     <title>Welcome</title>
 </head>
 <body>
-    <div class="container">
-
+    <div class="container-fluid g-0">
+    
         <header class="fixed-top">
             <nav class="navbar navbar-expand-lg bg-dark-blue">
                 <div class="container-fluid">
-
+                    
                     <a class="navbar-brand" href="#"><img src="assets/logos/logo_light_blue.png" class="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                    
                     <div class="collapse navbar-collapse" id="navbarToggler">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
@@ -36,58 +36,70 @@
                             </div>
                         </form>
                         <div class="text-start mb-2" id="authContainer">
-              
+                            
                         </div>
                     </div>
-
+                    
                 </div>
             </nav>
         </header>
-        <body>
+        <main class="mt-5" id="landingpage">
+            
+                    <div class="container col-xxl-8 px-4 py-5" id="hero">
+                        <div class="row flex-lg-row-reverse align-items-center justify-content-center g-5 py-5">
+                            <div class="col-10 col-sm-8 col-lg-6">
+                                <img src="/assets/images/background.png" id="heroImage" class="d-block mx-lg-auto img-fluid shadow rounded-3" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-3 mb-2">
+                                    <h1 class="display-5 fw-bold lh-1 mb-3 text-center">Welcome</h1>
+                                    <p class="lead"></p>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <a id="getStartedBtn" class="btn btn-orange btn-lg px-4 shadow">GET STARTED</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
-        <h2>Hello</h2>
+                    <a class="btn btn-orange text-dark-blue" id="scrollBtn" href="/pages/register/">
+                        <!-- <i class="bi bi-arrow-up"></i> -->
+                        Create user
+                    </a>
 
-        </body>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col">
+                        <h1>Browse</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
 
+                        <!-- <div class="card bg-dark-blue text-light-blue" style="width: 18rem;">
+                            <img src="./assets/images/background.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <div class="d-flex justify-content-between mb-1">
+                                    <div>
+                                        <p class="card-text mb-0">Deadline</p>
+                                        <p class="card-text fs-5">20.02 12:00 am</p>
+                                    </div>
+                                    <div>
+                                        <p class="card-text mb-0">Highest bid</p>
+                                        <p class="card-text fs-5">500 credits</p>
+                                    </div>
+                                </div>
+                                    <a href="#" class="btn btn-orange shadow">Go somewhere</a>
+                            </div>
+                        </div> -->
+
+                    </div>
+                    
+                </div>
+            </div>
+                
+        </main>
     </div>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-dark-blue">
         <div class="col-md-4 d-flex align-items-center">
@@ -98,9 +110,9 @@
         </div>
     
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex me-3">
-          <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook text-orange"></i></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram text-orange"></i></svg></a></li>
-          <li class="ms-3"><a class="text-muted" href="#"><i class="bi bi-twitter text-orange"></i></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://facebook.com"><i class="bi bi-facebook text-orange"></i></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://instagram.com"><i class="bi bi-instagram text-orange"></i></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="https://twitter.com"><i class="bi bi-twitter text-orange"></i></a></li>
         </ul>
     </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
