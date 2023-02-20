@@ -41,7 +41,7 @@ export function userProfileAvatar(){
     aTag.querySelector("img").style = "width: 60px;";
 
     if(JSON.parse(getAvatar()) === ""){
-        aTag.querySelector("img").src = "https://st.depositphotos.com/1779253/5140/v/600/depositphotos_51401141-stock-illustration-male-avatar-profile-picture-use.jpg";
+        aTag.querySelector("img").src = "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
     } else {
         aTag.querySelector("img").src = JSON.parse(getAvatar());
     }
