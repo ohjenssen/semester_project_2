@@ -5,3 +5,4 @@ export { logout } from "./logout.mjs";
 export { scrollFunction } from "./scrollBtn.mjs";
 export { setLandingPage } from "./landingPage.mjs";
 export { setProfilePage } from "./profilePage.mjs";
+export { changeAvatar } from "./updateAvatar.mjs";

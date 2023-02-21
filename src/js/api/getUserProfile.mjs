@@ -3,7 +3,7 @@ import * as localStorage from "../localStorage/index.mjs";
 
 export async function getUserProfile(){
     const profileUrl = `${api_urls.base}${api_urls.profile}${localStorage.getUserName()}?_listings=true`;
-    const accessToken = JSON.parse(localStorage.getAccessToken());
+    const accessToken = localStorage.getAccessToken();
 
     const response = await fetch(profileUrl, {
         method: "GET",
@@ -14,6 +14,5 @@ export async function getUserProfile(){
     })
 
     const json = await response.json();
-    console.log(json)
     return json;
 }

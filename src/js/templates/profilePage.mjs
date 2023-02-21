@@ -1,6 +1,6 @@
 export function renderProfile(name, email, avatar, credits, wins, count){
     const nameContainer = document.querySelector("#profileName");
-    const avatarContainer = document.querySelector("#avatar");
+    const avatarContainer = document.querySelector("#avatarImg");
     const emailContainer = document.querySelector("#email");
     const creditsContainer = document.querySelector("#currentCredits");
     const winsContainer = document.querySelector("#currentWins");

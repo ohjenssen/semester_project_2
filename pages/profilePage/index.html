@@ -53,7 +53,7 @@
                       <div class="card">
                         <div id="avatarContainer" class="rounded-top d-flex flex-row">
                           <div class="ms-3 mt-5 d-flex flex-column">
-                            <img id="avatar" src="" alt="Profile avatar" class="img-fluid img-thumbnail mt-4 mb-2">
+                            <img id="avatarImg" src="" alt="Profile avatar" class="img-fluid img-thumbnail mt-4 mb-2">
                             <button id="editAvatarBtn" type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#editAvatarModal">Edit avatar</button>
                           </div>
                           <div id="nameContainer" class="ms-3">
@@ -100,15 +100,21 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Modal title</h5>
+                      <h5 class="modal-title">New avatar</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <p>Modal body text goes here.</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <form id="changeAvatarForm">
+                        <div class="mb-3">
+                            <label for="avatar" class="form-label">Add url</label>
+                            <input type="text" class="form-control" id="avatar" aria-describedby="avatar" name="avatar" required>
+                            <div id="avatarChangeInfo" class="form-text">Your avatar will be changed when you press 'Save'</div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button id="changeAvatarBtn" type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                      </form>
                     </div>
                   </div>
                 </div>

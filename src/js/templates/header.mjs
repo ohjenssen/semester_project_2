@@ -40,10 +40,10 @@ export function userProfileAvatar(){
     aTag.querySelector("img").className = "img-fluid rounded-circle border border-dark border-3";
     aTag.querySelector("img").style = "width: 60px;";
 
-    if(JSON.parse(getAvatar()) === ""){
+    if(!getAvatar()){
         aTag.querySelector("img").src = "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
     } else {
-        aTag.querySelector("img").src = JSON.parse(getAvatar());
+        aTag.querySelector("img").src = getAvatar();
     }
     
     return aTag;

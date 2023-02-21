@@ -1,4 +1,4 @@
 export function getAvatar(){
-    const avatar = localStorage.getItem("avatar");
+    const avatar = JSON.parse(localStorage.getItem("avatar"));
     return avatar;
 }
