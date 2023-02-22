@@ -20,10 +20,15 @@ export function setRoute(path){
             listeners.setProfilePage();
             listeners.changeAvatar();
             listeners.getListings();
+            window.onscroll = function() {listeners.scrollFunction()};
             break;
 
         case "/pages/browse/":
             listeners.getListings();
+            break;
+
+        case "/pages/listing/":
+            listeners.getSingleListing();
             break;
     }
 

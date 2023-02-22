@@ -12,5 +12,4 @@ export async function getListings(){
     console.log(listings);
 
     listingsDiv.append(templates.userProfilePosts(listings));
-
 }
