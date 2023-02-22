@@ -7,8 +7,18 @@
     font-size: 18px; /* Increase font size */
 }
 
+#bidForm div .form-control {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+#bidForm div .input-container {
+  border-bottom: 3px solid #082645;
+}
+
 @media screen and (max-width: 480px){
     #scrollBtn{
       display: none;
     }
-  }
+}
