@@ -3,4 +3,5 @@ export const api_urls = {
     register: "/api/v1/auction/auth/register",
     login: "/api/v1/auction/auth/login",
     profile: "/api/v1/auction/profiles/",
+    listings: "/api/v1/auction/listings"
 }

@@ -6,3 +6,4 @@ export { scrollFunction } from "./scrollBtn.mjs";
 export { setLandingPage } from "./landingPage.mjs";
 export { setProfilePage } from "./profilePage.mjs";
 export { changeAvatar } from "./updateAvatar.mjs";
+export { getListings } from "./getListings.mjs";
