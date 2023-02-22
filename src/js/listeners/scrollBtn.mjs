@@ -4,7 +4,7 @@ export function scrollFunction() {
     let scrollBtn = document.getElementById("scrollBtn");
 
             if(localStorage.getAccessToken()){
-                scrollBtn.href = "/pages/browse";
+                scrollBtn.href = "/pages/createListing";
                 scrollBtn.innerText = "Create listing";
             } else {
                 scrollBtn.href = "/pages/register/";
