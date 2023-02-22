@@ -1,9 +1,5 @@
 import { setRoute } from "./routes.mjs";
-import { getUserProfile } from "./api/index.mjs";
-
-getUserProfile();
+import * as storage from "./localStorage/index.mjs";
 
 const path = location.pathname;
-console.log(path)
 setRoute(path);
-

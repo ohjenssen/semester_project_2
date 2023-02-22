@@ -12,12 +12,18 @@ export function setRoute(path){
 
         case "/":
             listeners.setLandingPage();
+            listeners.getListings();
             window.onscroll = function() {listeners.scrollFunction()};
             break;
 
         case "/pages/profilePage/":
             listeners.setProfilePage();
             listeners.changeAvatar();
+            listeners.getListings();
+            break;
+
+        case "/pages/browse/":
+            listeners.getListings();
             break;
     }
 
