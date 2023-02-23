@@ -7,13 +7,14 @@
     font-size: 18px; /* Increase font size */
 }
 
-#bidForm div .form-control {
+// Forms
+#bidForm div .form-control, #createListing div .form-control {
     border: none;
     border-radius: 0;
     padding: 0;
 }
 
-#bidForm div .input-container {
+#bidForm div .input-container, #createListing div .input-container {
   border-bottom: 3px solid #082645;
 }
 
