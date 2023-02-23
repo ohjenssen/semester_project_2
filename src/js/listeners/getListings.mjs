@@ -11,5 +11,12 @@ export async function getListings(){
     const listings = await api.getListings(id, profileName);
     console.log(listings);
 
-    listingsDiv.append(templates.userProfilePosts(listings));
+    if(listings.length === 0){
+        listingsDiv.append(templates.noListings());
+    } else {
+        listings.map((listing) => {
+            listingsDiv.append(templates.userProfilePosts(listing))
+        })
+    }
+    
 }
