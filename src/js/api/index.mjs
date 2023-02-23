@@ -4,3 +4,4 @@ export { getUserProfile } from "./getUserProfile.mjs";
 export { changeAvatar } from "./changeAvatar.mjs";
 export { getListings } from "./getListings.mjs";
 export { getSingleListing } from "./read/getSingleListing.mjs";
+export { createListing } from "./create/createListing.mjs";
