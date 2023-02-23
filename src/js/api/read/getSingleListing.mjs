@@ -10,7 +10,7 @@ const data = {
     headers: {
         "Authorization": `Bearer ${storage.getAccessToken()}`,
         "Content-type": "application/json; charset=UTF-8"
-}}
+}};
 
 export async function getSingleListing(){
     const url =`${api_urls.base}${api_urls.listings}/${id}?_seller=true&_bids=true`;
@@ -18,4 +18,4 @@ export async function getSingleListing(){
     const response = await fetch(url, data);
     const json = response.json();
     return json;
-}
+};
