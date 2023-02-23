@@ -31,13 +31,13 @@
   font-size: 18px; /* Increase font size */
 }
 
-#bidForm div .form-control {
+#bidForm div .form-control, #createListing div .form-control {
   border: none;
   border-radius: 0;
   padding: 0;
 }
 
-#bidForm div .input-container {
+#bidForm div .input-container, #createListing div .input-container {
   border-bottom: 3px solid #082645;
 }
 
@@ -11124,7 +11124,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .card-image {
   max-height: 300px;
-  width: auto;
+  max-width: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
