@@ -19,7 +19,6 @@ export function setRoute(path){
         case "/pages/profilePage/":
             listeners.setProfilePage();
             listeners.changeAvatar();
-            // listeners.getUserProfileListings();
             listeners.getListings();
             window.onscroll = function() {listeners.scrollFunction()};
             break;

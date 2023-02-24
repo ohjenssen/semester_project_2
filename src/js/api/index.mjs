@@ -5,3 +5,4 @@ export { changeAvatar } from "./changeAvatar.mjs";
 export { getListings } from "./getListings.mjs";
 export { getSingleListing } from "./read/getSingleListing.mjs";
 export { createListing } from "./create/createListing.mjs";
+export { deleteListing } from "./delete/delete.mjs";
