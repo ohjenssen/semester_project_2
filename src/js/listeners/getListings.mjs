@@ -9,7 +9,6 @@ export async function getListings(){
 
     const listingsDiv = document.querySelector("#listings");
     const listings = await api.getListings(id, profileName);
-    console.log(listings);
 
     if(listings.length === 0){
         listingsDiv.append(templates.noListings());
