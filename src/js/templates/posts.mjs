@@ -43,6 +43,7 @@ export function userProfilePosts(listing){
     divContainer.querySelector("#deadline").innerText = d.toLocaleString();
     divContainer.querySelector("#bids").innerText = listing._count.bids;
     divContainer.querySelector("#view").href = `/pages/listing/?id=${listing.id}`;
+    divContainer.querySelector("#edit").href = `/pages/editListing/?id=${listing.id}`;
 
     divContainer.append(deleteModal(listing.id));
 
