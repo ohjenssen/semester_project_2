@@ -1,3 +1,5 @@
+import * as api from "../api/index.mjs";
+
 export function deleteModal(id){
     const modal = document.createElement("div");
     modal.className = "modal text-dark-blue";
@@ -16,11 +18,16 @@ export function deleteModal(id){
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" id="delete" class="btn btn-danger text-dark">Delete</button>
+                                <button id="deleteBtn" type="button" class="btn btn-danger deleteBtn text-dark">Delete</button>
                             </div>
                         </div>
                     </div>
     `;
+
+    const deleteBtns = modal.querySelector("#deleteBtn");
+    deleteBtns.addEventListener("click", () => {
+        api.deleteListing(id);
+    })
 
     return modal;
 }
