@@ -34,6 +34,10 @@ export function setRoute(path){
         case "/pages/createListing/":
             listeners.createListing();
             break;
+
+        case "/pages/editListing/":
+            listeners.editListing();
+            break;
     }
 
     listeners.checkLoginStatus();

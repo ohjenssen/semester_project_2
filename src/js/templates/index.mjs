@@ -2,3 +2,4 @@ export { loginBtn, registerBtn, userProfileAvatar,  logoutBtn} from "./header.mj
 export { loggedIn, notLoggedIn } from "./landingpage.mjs";
 export { renderProfile } from "./profilePage.mjs";
 export { userProfilePosts, singeListing, noListings } from "./posts.mjs";
+export { preFillForm } from "./editListing.mjs";

@@ -9,3 +9,4 @@ export { changeAvatar } from "./updateAvatar.mjs";
 export { getListings } from "./getListings.mjs";
 export { getSingleListing } from "./read/getSingleListing.mjs";
 export { createListing } from "./create/createListing.mjs";
+export { editListing } from "./update/editListing.mjs";
