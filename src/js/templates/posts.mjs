@@ -97,9 +97,6 @@ export function singeListing(listing){
                                                 <h5>Bids</h5>
                                             </div>
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">An item</li>
-                                                <li class="list-group-item">A second item</li>
-                                                <li class="list-group-item">A third item</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -126,6 +123,27 @@ export function singeListing(listing){
     } else {
         divContainer.querySelector("#tags").innerText = listing.tags;
     }
+
+    const bidsContainer = divContainer.querySelector(".list-group");
+    const li = document.createElement("li");
+    li.className = "list-group-item";
+    
+    if(listing.bids.length > 0){
+        for (let i = 0; i < listing.bids.length; i++){
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+
+            li.innerText = `Name: ${listing.bids[i].bidderName} Bid: ${listing.bids[i].amount}`;
+            bidsContainer.append(li);
+        }
+    } else {
+        const message = document.createElement("h3");
+        message.innerText = "No bids yet!";
+
+        bidsContainer.append(message);
+    }
+
+    console.log(listing.bids);
     // divContainer.querySelector("#bids").innerText = listing._count.bids;
     // divContainer.querySelector("#view").href = `/pages/listing/?id=${listing.id}`; 
 
@@ -139,6 +157,3 @@ export function noListings(){
     divContainer.innerText = "No listings yet!";
     return divContainer;
 }
-
-// "#deleteModalb73aef1e-56c3-41fd-87d2-ea2e1be550ae"
-// "#deleteModalb73aef1e-56c3-41fd-87d2-ea2e1be550ae"
