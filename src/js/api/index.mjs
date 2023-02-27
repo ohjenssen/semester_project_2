@@ -7,3 +7,4 @@ export { getSingleListing } from "./read/getSingleListing.mjs";
 export { createListing } from "./create/createListing.mjs";
 export { deleteListing } from "./delete/delete.mjs";
 export { editListing } from "./update/editListing.mjs";
+export { createBid } from "./create/createBid.mjs";
