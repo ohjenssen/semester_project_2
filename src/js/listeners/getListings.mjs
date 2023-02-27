@@ -5,17 +5,40 @@ export async function getListings(){
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     const profileName = params.get("name");
-    const id = params.get("id");
+    const path = location.pathname;
 
     const listingsDiv = document.querySelector("#listings");
-    const listings = await api.getListings(id, profileName);
+    const listings = await api.getListings(profileName);
 
-    if(listings.length === 0){
-        listingsDiv.append(templates.noListings());
-    } else {
-        listings.map((listing) => {
-            listingsDiv.append(templates.userProfilePosts(listing))
-        })
-    }
+    switch(path){
+        case "/":
+            console.log(listings)
+            listings.map((listing) => {
+                listingsDiv.append(templates.browseListings(listing));
+            })
+            break;
+
+        case "/pages/profilePage/":
+            if(listings.length === 0){
+                    listingsDiv.append(templates.noListings());
+                } else {
+                    listings.map((listing) => {
+                        listingsDiv.append(templates.userProfilePosts(listing));
+                    })
+            }
+            break;
+
+        case "/pages/otherProfiles/" :
+            if(listings.length === 0){
+                listingsDiv.append(templates.noListings());
+            } else {
+                listings.map((listing) => {
+                    listingsDiv.append(templates.browseListings(listing))
+                })
+            }
+            break;
+        
+        
+    };
     
 }
