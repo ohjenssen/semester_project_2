@@ -1,5 +1,6 @@
 import { deleteModal } from "./modal.mjs";
 import * as storage from "../localStorage/index.mjs";
+import * as api from "../api/index.mjs";
 
 export function profileAvatar(listing){
     const img = document.createElement("img");
@@ -13,23 +14,6 @@ export function profileAvatar(listing){
     }
 
     return img;
-
-    // const aTag = document.createElement("a");
-    // aTag.className = "me-2";
-    // aTag.innerHTML = "<img>";
-    // aTag.href = `/pages/otherProfiles/?name=${listing.seller.name}`;
-    // aTag.id = "profileAvatar";
-
-    // aTag.querySelector("img").alt = "profile image";
-    // aTag.querySelector("img").className = "img-fluid rounded-circle border border-dark border-1";
-    // aTag.querySelector("img").style = "width: 60px;";
-
-    // if(!listing.seller.avatar){
-    //     aTag.querySelector("img").src = "https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
-    // } else {
-    //     aTag.querySelector("img").src = listing.seller.avatar;
-    // }
-    // return aTag;
 }
 
 export function browseListings(listing){
@@ -161,16 +145,15 @@ export function singeListing(listing){
                                         </div>
                                     </div>
                                     <div class="col-12 col-sm-10 col-md-6 col-lg-6 col-xl-6">
-                                        <div class="">
-                                            <form class="is-valid rounded-3 mx-auto" id="bidForm" required>
-                                                <div class="mb-5">
-                                                    <h3>Bid</h3>
-                                                    <div class="d-flex input-container">
-                                                        <input type="text" class="form-control" id="bidInput" placeholder="Enter bid" name="bidInput" required>
-                                                    </div>
-                                                    <div class="d-grid gap-2 mt-2">
-                                                        <button type="submit" id="bidButton" class="btn btn-orange btn-lg px-4 shadow">BID</button>
-                                                    </div>
+                                        <div id="form-container">
+                                            <form id="bidForm" class="is-valid rounded-3 mx-auto"><div class="mb-5">
+                                                <label for="amount" class="form-label fs-3">Bid</label>
+                                                <div class="d-flex input-container">
+                                                    <input type="number" class="form-control" id="amount" placeholder="Enter bid" name="amount" required>
+                                                </div>
+                                                <div class="d-grid gap-2 mt-2">
+                                                    <button type="submit" id="bidButton" class="btn btn-orange btn-lg px-4 shadow">BID</button>
+                                                </div>
                                                 </div>
                                             </form>
                                         </div>
@@ -242,6 +225,16 @@ export function singeListing(listing){
         bidsContainer.append(message);
     } 
 
+    const form = divContainer.querySelector("#bidForm");
+    if(form){
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const bidAmount = Object.fromEntries(formData.entries());
+            bidAmount.amount = parseInt(bidAmount.amount);
+            api.createBid(bidAmount);
+        })
+    }
     return divContainer;
 }
 
