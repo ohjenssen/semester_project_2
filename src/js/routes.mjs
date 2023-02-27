@@ -23,6 +23,11 @@ export function setRoute(path){
             window.onscroll = function() {listeners.scrollFunction()};
             break;
 
+        case "/pages/otherProfiles/":
+            listeners.setProfilePage();
+            listeners.getListings();
+            break;
+
         case "/pages/browse/":
             listeners.getListings();
             break;
