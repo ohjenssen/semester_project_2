@@ -17,6 +17,14 @@ export async function getListings(profileName){
             url += `${api_urls.listings}?_active=true`;
             break;
 
+        case "/pages/searchResults/":
+            url += `${api_urls.listings}`;
+            break;
+
+        case "/pages/browse/":
+            url += `${api_urls.listings}`;
+            break;
+
         case "/pages/profilePage/":
             url += `${api_urls.profile}${profileName}/listings`;
             break;
@@ -24,6 +32,11 @@ export async function getListings(profileName){
         case "/pages/otherProfiles/":
             url += `${api_urls.profile}${profileName}/listings`;
             break;
+
+        case "/pages/browse/":
+            url += `${api_urls.listings}`;
+            break;
+
     }
 
     const response = await fetch(url, data);
