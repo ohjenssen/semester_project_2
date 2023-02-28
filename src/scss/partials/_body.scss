@@ -18,6 +18,10 @@
   border-bottom: 3px solid #082645;
 }
 
+#listings {
+  min-height: 100vh;
+}
+
 @media screen and (max-width: 480px){
     #scrollBtn{
       display: none;
