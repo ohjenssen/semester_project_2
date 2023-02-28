@@ -43,9 +43,14 @@ export function setRoute(path){
         case "/pages/editListing/":
             listeners.editListing();
             break;
+
+        case "/pages/searchResults/":
+            listeners.getListings();
+            window.onscroll = function() {listeners.scrollFunction()};
     }
 
     listeners.checkLoginStatus();
     listeners.logout();
+    listeners.getSearchResults();
 
 }
