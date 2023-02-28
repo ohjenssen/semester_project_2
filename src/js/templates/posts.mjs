@@ -150,10 +150,12 @@ export function singeListing(listing){
                                                 <label for="amount" class="form-label fs-3">Bid</label>
                                                 <div class="d-flex input-container">
                                                     <input type="number" class="form-control" id="amount" placeholder="Enter bid" name="amount" required>
-                                                </div>
-                                                <div class="d-grid gap-2 mt-2">
+                                                    </div>
+                                                    <div class="d-grid gap-2 mt-2">
                                                     <button type="submit" id="bidButton" class="btn btn-orange btn-lg px-4 shadow">BID</button>
-                                                </div>
+                                                    <button type="button" id="bidModalButton" data-bs-toggle="modal" data-bs-target="#authWarning" class="btn btn-orange btn-lg px-4 shadow">BID</button>
+                                                    <p class="mt-3" id="errorTag"></p>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
@@ -190,6 +192,8 @@ export function singeListing(listing){
     }
 
     const sellerContainer = divContainer.querySelector("#sellerContainer");
+    const bidButton = divContainer.querySelector("#bidButton");
+    const bidModalButton = divContainer.querySelector("#bidModalButton");
 
     if(storage.getAccessToken()){
         const profileLink = document.createElement("a");
@@ -199,9 +203,13 @@ export function singeListing(listing){
         profileLink.innerText = listing.seller.name;
         profileLink.append(profileAvatar(listing));
         sellerContainer.append(profileLink);
+        bidButton.hidden = false;
+        bidModalButton.hidden = true;
     } else {
         divContainer.querySelector("#seller").innerText = listing.seller.name;
         divContainer.querySelector("#seller").append(profileAvatar(listing));
+        bidButton.hidden = true;
+        bidModalButton.hidden = false;
     }
 
 
