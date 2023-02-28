@@ -13,7 +13,7 @@ export function createListing(){
             const { date, time, ...data } = listingInfo;
 
             const tagsArr = data.tags.split(" ");
-            const mediaArr = data.media.split(" ")
+            const mediaArr = data.media.split("")
 
             data.endsAt = deadline;
             data.media = mediaArr;
