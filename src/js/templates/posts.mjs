@@ -2,6 +2,12 @@ import { deleteModal } from "./modal.mjs";
 import * as storage from "../localStorage/index.mjs";
 import * as api from "../api/index.mjs";
 
+const options = {
+    hour12: true,
+    hour: "numeric",
+    minute: "numeric"
+};
+
 export function profileAvatar(listing){
     const img = document.createElement("img");
     img.className = "img-fluid rounded-circle border border-dark border-1 m-2";
@@ -52,7 +58,7 @@ export function browseListings(listing){
     };
     
     const d = new Date(listing.endsAt);
-    divContainer.querySelector("#deadline").innerText = d.toLocaleString();
+    divContainer.querySelector("#deadline").innerText = `${d.toLocaleDateString()} ${d.toLocaleTimeString("en-US", options)}`;
     divContainer.querySelector("#bids").innerText = listing._count.bids;
     divContainer.querySelector("#view").href = `/pages/listing/?id=${listing.id}`;
 
@@ -99,7 +105,7 @@ export function userProfilePosts(listing){
     };
     
     const d = new Date(listing.endsAt);
-    divContainer.querySelector("#deadline").innerText = d.toLocaleString();
+    divContainer.querySelector("#deadline").innerText = `${d.toLocaleDateString()} ${d.toLocaleTimeString("en-US", options)}`;
     divContainer.querySelector("#bids").innerText = listing._count.bids;
     divContainer.querySelector("#view").href = `/pages/listing/?id=${listing.id}`;
     divContainer.querySelector("#edit").href = `/pages/editListing/?id=${listing.id}`;
