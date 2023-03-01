@@ -24,7 +24,7 @@ export function browseListings(listing){
                                     <div class="image-container rounded-top mx-auto">
                                         <img src="" class="card-img-top d-block" alt="Listing image">
                                     </div>
-                                    <div class="card-body">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Card title</h5>
                                         <div class="d-flex justify-content-between flex-wrap mb-1">
                                             <div class="me-3 mt-2">
