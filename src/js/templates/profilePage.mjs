@@ -8,8 +8,7 @@ export function renderProfile(name, email, avatar, credits, wins){
     const winsModal = document.querySelector("#winsModal");
     const modalBody = winsModal.querySelector(".modal-body");
     const winLink = document.createElement("a");
-    winLink.className = "text-dark-blue text-decoration-none";
-
+    winLink.className = "text-dark-blue";
     const noWins = document.createElement("h3");
 
 
