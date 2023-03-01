@@ -36,7 +36,9 @@ export function browseListings(listing){
                                                 <p id="bids" class="card-text fs-5"></p>
                                             </div>
                                         </div>
-                                        <a id="view" class="btn btn-light-blue float-start">View</a>
+                                        <div class="mt-auto d-flex flex-column">
+                                            <a id="view" class="btn btn-light-blue">View</a>
+                                        </div>
                                     </div>
                                 `;
 
