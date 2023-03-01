@@ -24,7 +24,7 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Browse</a>
+                        <a class="nav-link" href="/pages/browse/">Browse</a>
                     </li>
                     <li class="nav-item dropdown me-2">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Filters</a>
@@ -33,7 +33,23 @@
                                 <form class="d-flex m-2" id="activeAuctionsForm">
                                     <div class="form-check" id="filterByActive">
                                         <input class="form-check-input" type="checkbox" value="" id="checkboxActiveAuctions" name="checkboxActiveAuctions" unchecked>
-                                        <label class="form-check-label" for="flexCheckImages">Active auctions</label>
+                                        <label class="form-check-label" for="checkboxActiveAuctions">Active auctions</label>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form class="d-flex m-2" id="ascendingForm">
+                                    <div class="form-check" id="filterByAscending">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkboxAscending" name="checkboxAscending" unchecked>
+                                        <label class="form-check-label" for="checkboxAscending">Ascending (0-9, A-Z)</label>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <form class="d-flex m-2" id="artForm">
+                                    <div class="form-check" id="filterByArt">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkboxArt" name="checkboxArt" unchecked>
+                                        <label class="form-check-label" for="checkboxArt">Art</label>
                                     </div>
                                 </form>
                             </li>
