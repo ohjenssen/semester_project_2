@@ -13,7 +13,7 @@ export function scrollFunction() {
 
     const screenWidth = screen.width;
 
-    if ((document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) && screenWidth > 480) {
+    if ((document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) && screenWidth > 480) {
         scrollBtn.style.display = "block";
     } else {
         scrollBtn.style.display = "none";

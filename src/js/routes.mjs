@@ -30,6 +30,7 @@ export function setRoute(path){
 
         case "/pages/browse/":
             listeners.getListings();
+            window.onscroll = function() {listeners.scrollFunction()};
             break;
 
         case "/pages/listing/":
