@@ -45,11 +45,17 @@
   min-height: 100vh;
 }
 
-@media screen and (max-width: 480px) {
-  #scrollBtn {
-    display: none;
-  }
+.image-container {
+  height: 250px;
+  width: 100%;
 }
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 #registerForm, #loginForm {
   min-width: 300px;
   max-width: 400px;
@@ -11127,12 +11133,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 .listings {
-  max-width: 300px;
-}
-
-.card-image {
-  max-height: 300px;
-  max-width: 300px;
+  width: 300px;
 }
 
 /*# sourceMappingURL=styles.css.map */

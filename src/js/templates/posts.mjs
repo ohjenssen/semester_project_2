@@ -17,13 +17,12 @@ export function profileAvatar(listing){
 }
 
 export function browseListings(listing){
-    
-    const divContainer = document.createElement("div");
-    divContainer.className = "card bg-dark-blue text-light-blue shadow mt-4 card-listing listings";
 
+    const divContainer = document.createElement("div");
+    divContainer.className = "card bg-dark-blue text-light-blue shadow mt-2 m-1 p-0 listings";
     divContainer.innerHTML = `      
-                                    <div class="image-container bg-light-blue rounded-top">
-                                        <img src="" class="card-img-top mx-auto d-block card-image" alt="Listing image">
+                                    <div class="image-container rounded-top mx-auto">
+                                        <img src="" class="card-img-top d-block" alt="Listing image">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
@@ -37,10 +36,8 @@ export function browseListings(listing){
                                                 <p id="bids" class="card-text fs-5"></p>
                                             </div>
                                         </div>
-                                        <a id="view" class="btn btn-light-blue shadow mt-2">View</a>
-                                        
+                                        <a id="view" class="btn btn-light-blue float-start">View</a>
                                     </div>
-                                    
                                 `;
 
 
@@ -66,8 +63,8 @@ export function userProfilePosts(listing){
     divContainer.className = "card bg-dark-blue text-light-blue shadow mt-4 listings mx-auto";
 
     divContainer.innerHTML = `
-                                    <div class="image-container bg-light-blue rounded-top">
-                                        <img src="" class="card-img-top mx-auto d-block card-image" alt="Listing image">
+                                    <div class="image-container bg-light-blue rounded-top mx-auto">
+                                        <img src="" class="card-img-top d-block" alt="Listing image">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
