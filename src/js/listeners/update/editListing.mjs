@@ -10,9 +10,16 @@ export async function editListing(){
             event.preventDefault();
             const formData = new FormData(event.target);
             const editInfo = Object.fromEntries(formData.entries());
-            editInfo.tags = editInfo.tags.split(" ");
-            editInfo.media = editInfo.media.split(" ");
 
+            const tagsArr = editInfo.tags.split(" ");
+            let mediaArr = editInfo.media.split(" ");
+
+            editInfo.tags = editInfo.tags.split(" ");
+            editInfo.media = mediaArr;
+            if(editInfo.media[0] === ""){
+                editInfo.media = "";
+            };
+            console.log(editInfo);
             api.editListing(editInfo);
         })
     }

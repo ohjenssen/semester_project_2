@@ -13,7 +13,7 @@ export async function editListing(body){
             "Authorization": `Bearer ${storage.getAccessToken()}`,
             "Content-type": "application/json; charset=UTF-8"
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
     };
     
     const url = `${api_urls.base}${api_urls.listings}/${id}`;
@@ -23,7 +23,7 @@ export async function editListing(body){
         const json = await response.json();
 
         if(response.ok){
-            window.location.replace(`/pages/listing/?id=${id}`)
+            window.location.replace(`/pages/listing/?id=${id}`);
         }
 
     } catch(error) {

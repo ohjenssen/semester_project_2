@@ -13,12 +13,14 @@ export function createListing(){
             const { date, time, ...data } = listingInfo;
 
             const tagsArr = data.tags.split(" ");
-            const mediaArr = data.media.split("")
+            let mediaArr = data.media.split(" ");
+            if(mediaArr[0] === ""){
+                mediaArr = "";
+            };
 
             data.endsAt = deadline;
             data.media = mediaArr;
             data.tags = tagsArr;
-            console.log(data)
             api.createListing(data);
 
             

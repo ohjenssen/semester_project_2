@@ -12,12 +12,11 @@ export async function createListing(formInfo){
         },
     };
 
+    const url = `${api_urls.base}${api_urls.listings}`;
+
     try { 
-        const url = `${api_urls.base}${api_urls.listings}`;
         const response = await fetch(url, data);
         const json = await response.json();
-        console.log(data)
-        console.log(response)
         console.log(json);
         
         if(response.ok){
