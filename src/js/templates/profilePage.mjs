@@ -1,4 +1,4 @@
-export function renderProfile(name, email, avatar, credits, wins, count){
+export function renderProfile(name, email, avatar, credits, wins){
     const nameContainer = document.querySelector("#profileName");
     const avatarContainer = document.querySelector("#avatarImg");
     const emailContainer = document.querySelector("#email");

@@ -6,8 +6,6 @@ export async function getUserProfile(){
     const params = new URLSearchParams(queryString);
     const name = params.get("name");
 
-
-    // const profileUrl = `${api_urls.base}${api_urls.profile}${storage.getUserName()}?_listings=true`;
     const profileUrl = `${api_urls.base}${api_urls.profile}${name}?_listings=true`;
 
     const response = await fetch(profileUrl, {
@@ -19,5 +17,6 @@ export async function getUserProfile(){
     })
 
     const json = await response.json();
+    console.log(json);
     return json;
 }
