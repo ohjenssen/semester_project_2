@@ -86,7 +86,10 @@
                                     </div>
                                 </div>
                                 <div id="listings" class="card-body p-4 text-black">
-                                    <a href="/pages/createListing/" class="btn btn-orange mb-5 btn-lg" >Create listing</a>
+                                    <div class="d-flex">
+                                        <a href="/pages/createListing/" class="btn btn-orange mb-5 btn-lg" >Create listing</a>
+                                        <button id="seeWinsBtn" type="button" class="btn btn-dark-blue ms-auto mb-5 btn-lg" data-bs-toggle="modal" data-bs-target="#winsModal">Wins</button>
+                                    </div>
                                     <div class="d-flex justify-content-between align-items-center mb-4">
                                         <h2 class="lead fw-normal mb-0 fs-3 fw-bold">Listings</h2>
                                     </div>
@@ -116,6 +119,22 @@
                             <button id="changeAvatarBtn" type="submit" class="btn btn-primary">Save changes</button>
                           </div>
                       </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal" tabindex="-1" id="winsModal">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Your wins</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>

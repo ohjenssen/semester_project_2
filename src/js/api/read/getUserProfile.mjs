@@ -17,6 +17,5 @@ export async function getUserProfile(){
     })
 
     const json = await response.json();
-    console.log(json);
     return json;
 }
