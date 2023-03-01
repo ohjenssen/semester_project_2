@@ -1,4 +1,5 @@
 import { api_urls } from "../constants.mjs";
+import * as templates from "../../templates/index.mjs";
 import * as storage from "../../localStorage/index.mjs";
 
 const queryString = window.location.search;
@@ -23,6 +24,9 @@ export async function editListing(body){
         const json = await response.json();
 
         if(response.ok){
+            const submitBtn = document.querySelector("#editBtn");
+            submitBtn.innerHTML = "";
+            submitBtn.append(templates.addLoader());
             window.location.replace(`/pages/listing/?id=${id}`);
         }
 

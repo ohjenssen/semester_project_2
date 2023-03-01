@@ -47,50 +47,55 @@
         <div class="container my-5">
 
 
-          <a class="btn btn-orange text-dark-blue" id="scrollBtn" href="/pages/register/">
-            Create listing
-        </a>
+            <a class="btn btn-orange text-dark-blue" id="scrollBtn" href="/pages/register/">
+                Create listing
+            </a>
 
-              <section>
+            <section>
                 <div class="container my-5 py-5 h-100">
-                  <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-12 col-sm-9 col-md-7 col-lg-7 col-xl-7">
-                      <div class="card shadow">
-                        <div id="avatarContainer" class="rounded-top d-flex flex-row">
-                          <div class="ms-3 mt-5 d-flex flex-column">
-                            <img id="avatarImg" src="" alt="Profile avatar" class="img-fluid img-thumbnail mt-4 mb-2">
-                            <button id="editAvatarBtn" type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#editAvatarModal">Edit avatar</button>
-                          </div>
-                          <div id="nameContainer" class="ms-3">
-                            <h1 id="profileName" class="fs-4"></h1>
-                            <p class="small text-muted" id="email"></p>
-                          </div>
-                        </div>
-                        <div id="profileInfoContainer" class="p-4">
-                          <div class="d-flex justify-content-end text-center py-1">
-                            <div>
-                              <p id="currentCredits" class="mb-1 h5">1000</p>
-                              <p class="small text-muted mb-0">Credits</p>
-                            </div>
-                            <div class="px-1">
-                              <p id="currentWins" class="mb-1 h5">0</p>
-                              <p class="small text-muted mb-0">Wins</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="listings" class="card-body p-4 text-black">
-                          <a href="/pages/createListing/" class="btn btn-orange mb-5 btn-lg" >Create listing</a>
-                          <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="lead fw-normal mb-0 fs-3 fw-bold">Listings</h2>
-                          </div>
-                          
 
+                    <div class="d-flex justify-content-center my-5" id="loader">
+                        <div class="spinner-border" role="status"style="width: 6rem; height: 6rem;" >
+                        <span class="visually-hidden">Loading...</span>
                         </div>
-                      </div>
                     </div>
-                  </div>
+
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-12 col-sm-9 col-md-7 col-lg-7 col-xl-7">
+                            <div class="card shadow">
+                                <div id="avatarContainer" class="rounded-top d-flex flex-row">
+                                    <div class="ms-3 mt-5 d-flex flex-column">
+                                        <img id="avatarImg" src="" alt="Profile avatar" class="img-fluid img-thumbnail mt-4 mb-2">
+                                        <button id="editAvatarBtn" type="button" class="btn btn-dark-blue" data-bs-toggle="modal" data-bs-target="#editAvatarModal">Edit avatar</button>
+                                    </div>
+                                    <div id="nameContainer" class="ms-3">
+                                        <h1 id="profileName" class="fs-4"></h1>
+                                        <p class="small text-muted" id="email"></p>
+                                    </div>
+                                </div>
+                                <div id="profileInfoContainer" class="p-4">
+                                    <div class="d-flex justify-content-end text-center py-1">
+                                        <div>
+                                        <p id="currentCredits" class="mb-1 h5">1000</p>
+                                        <p class="small text-muted mb-0">Credits</p>
+                                        </div>
+                                        <div class="px-1">
+                                        <p id="currentWins" class="mb-1 h5">0</p>
+                                        <p class="small text-muted mb-0">Wins</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="listings" class="card-body p-4 text-black">
+                                    <a href="/pages/createListing/" class="btn btn-orange mb-5 btn-lg" >Create listing</a>
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h2 class="lead fw-normal mb-0 fs-3 fw-bold">Listings</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </section>
+            </section>
 
               <div class="modal" tabindex="-1" id="editAvatarModal">
                 <div class="modal-dialog modal-dialog-centered">

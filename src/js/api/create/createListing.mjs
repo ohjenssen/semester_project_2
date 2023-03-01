@@ -1,4 +1,5 @@
 import { api_urls } from "../constants.mjs";
+import * as templates from "../../templates/index.mjs";
 import * as storage from "../../localStorage/index.mjs";
 
 export async function createListing(formInfo){
@@ -20,6 +21,9 @@ export async function createListing(formInfo){
         console.log(json);
         
         if(response.ok){
+            const submitBtn = document.querySelector("#submitBtn");
+            submitBtn.innerHTML = "";
+            submitBtn.append(templates.addLoader());
             window.location.replace("/");
         }
     } catch (error) {
