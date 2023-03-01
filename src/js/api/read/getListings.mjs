@@ -1,6 +1,6 @@
-import { api_urls } from "./constants.mjs";
-import * as components from "../components/index.mjs";
-import * as storage from "../localStorage/index.mjs";
+import { api_urls } from "../constants.mjs";
+import * as components from "../../components/index.mjs";
+import * as storage from "../../localStorage/index.mjs";
 
 const data = { 
     method: "GET",

@@ -9,7 +9,7 @@ export function changeAvatar(){
             const formData = new FormData(event.target);
             const avatarUrl = Object.fromEntries(formData.entries());
 
-            api.changeAvatar(avatarUrl);
+            api.editAvatar(avatarUrl);
         })
     }
 }

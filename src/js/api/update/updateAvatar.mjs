@@ -1,7 +1,7 @@
-import { api_urls } from "./constants.mjs";
-import * as storage from "../localStorage/index.mjs";
+import { api_urls } from "../constants.mjs";
+import * as storage from "../../localStorage/index.mjs";
 
-export async function changeAvatar(formData){
+export async function editAvatar(formData){
     const changeAvatarUrl = `${api_urls.base}${api_urls.profile}${storage.getUserName()}/media`;
     
     const data = {

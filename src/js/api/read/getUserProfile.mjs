@@ -1,5 +1,5 @@
-import { api_urls } from "./constants.mjs";
-import * as storage from "../localStorage/index.mjs";
+import { api_urls } from "../constants.mjs";
+import * as storage from "../../localStorage/index.mjs";
 
 export async function getUserProfile(){
     const queryString = window.location.search;
