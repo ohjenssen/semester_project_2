@@ -1,5 +1,5 @@
-import * as landingPage from "../templates/index.mjs";
-import * as localStorage from "../localStorage/index.mjs";
+import * as landingPage from "../../templates/index.mjs";
+import * as localStorage from "../../localStorage/index.mjs";
 
 export function setLandingPage(){
 

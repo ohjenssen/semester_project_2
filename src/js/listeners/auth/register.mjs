@@ -1,4 +1,4 @@
-import * as authenticate from "../api/index.mjs";
+import * as authenticate from "../../api/index.mjs";
 
 export function setRegisterFormListener(){
 

@@ -1,6 +1,6 @@
-import * as api from "../api/index.mjs";
-import * as templates from "../templates/index.mjs";
-import { api_urls } from "../api/constants.mjs";
+import * as api from "../../api/index.mjs";
+import * as templates from "../../templates/index.mjs";
+import { api_urls } from "../../api/constants.mjs";
  
 export async function getListings(){
     const queryString = window.location.search;

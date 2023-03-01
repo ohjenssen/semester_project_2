@@ -1,4 +1,4 @@
-import * as api from "../api/index.mjs";
+import * as api from "../../api/index.mjs";
 
 export function changeAvatar(){
     const form = document.querySelector("#changeAvatarForm");

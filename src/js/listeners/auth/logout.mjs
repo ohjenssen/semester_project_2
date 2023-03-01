@@ -1,4 +1,4 @@
-import { clearStorage } from "../localStorage/index.mjs";
+import { clearStorage } from "../../localStorage/index.mjs";
 
 
 export function logout(){
@@ -11,4 +11,3 @@ export function logout(){
         })
     }
 }
-

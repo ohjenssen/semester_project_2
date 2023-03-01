@@ -1,5 +1,5 @@
-import * as templates from "../templates/index.mjs";
-import * as api from "../api/index.mjs";
+import * as templates from "../../templates/index.mjs";
+import * as api from "../../api/index.mjs";
 
 export async function setProfilePage(){
     const profile = await api.getUserProfile();
