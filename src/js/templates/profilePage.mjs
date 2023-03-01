@@ -8,8 +8,6 @@ export function renderProfile(name, email, avatar, credits, wins){
     const winsModal = document.querySelector("#winsModal");
     const modalBody = winsModal.querySelector(".modal-body");
     
-    console.log(wins);
-    
     if(wins.length > 0){
         for (let i = 0; i < wins.length; i++){
             const winLink = document.createElement("a");
