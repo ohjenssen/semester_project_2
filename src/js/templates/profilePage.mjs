@@ -7,18 +7,19 @@ export function renderProfile(name, email, avatar, credits, wins){
 
     const winsModal = document.querySelector("#winsModal");
     const modalBody = winsModal.querySelector(".modal-body");
-    const winLink = document.createElement("a");
-    winLink.className = "text-dark-blue";
-    const noWins = document.createElement("h3");
-
-
+    
+    console.log(wins);
+    
     if(wins.length > 0){
         for (let i = 0; i < wins.length; i++){
+            const winLink = document.createElement("a");
+            winLink.className = "text-dark-blue";
             winLink.innerText = `Win #${i + 1}`;
             winLink.href = `/pages/listing/?id=${wins[i]}`;
             modalBody.append(winLink);
         }
     } else if(wins.length < 1) {
+        const noWins = document.createElement("h3");
         noWins.innerText = "No wins yet!";
         noWins.className = "text-center";
         modalBody.append(noWins);
