@@ -1,4 +1,5 @@
 import { api_urls } from "./constants.mjs";
+import * as components from "../components/index.mjs";
 import * as storage from "../localStorage/index.mjs";
 
 const data = { 
@@ -40,6 +41,9 @@ export async function getListings(profileName){
     }
 
     const response = await fetch(url, data);
+    if(response.ok){
+        components.removeLoader();
+    }
     const json = await response.json();
     return json;
 }
