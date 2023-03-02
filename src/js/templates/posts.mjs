@@ -11,7 +11,7 @@ const options = {
 
 export function profileAvatar(listing){
     const img = document.createElement("img");
-    img.className = "img-fluid rounded-circle border border-dark border-1 m-2";
+    img.className = "img-fluid rounded-circle border border-dark border-1 m-2 shadow";
     img.alt = "profile image";
     img.style = "width: 60px;";
     if(!listing.seller.avatar){
@@ -126,7 +126,7 @@ export function singeListing(listing){
                                         <div class="p-3 mb-2">
                                             <h1 class="display-5 fw-bold lh-1 mb-3 text-center"></h1>
                                             <div class="image-container border border-secondary shadow">
-                                                <img src="" id="listingImage" class="card-image d-block mx-auto img-fluid rounded-3" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+                                                <img src="" id="listingImage" class="card-image d-block mx-auto img-fluid rounded-3 shadow" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
                                             </div>
                                             <div class="mt-4">
                                                 <div class="mt-2">
@@ -165,7 +165,7 @@ export function singeListing(listing){
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="card">
+                                        <div class="card shadow">
                                             <div class="card-header">
                                                 <h5>Bids</h5>
                                             </div>
