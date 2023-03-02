@@ -14,6 +14,9 @@ export async function createListing(formInfo){
     };
 
     const url = `${api_urls.base}${api_urls.listings}`;
+    const submitBtn = document.querySelector("#submitBtn");
+    submitBtn.innerHTML = "";
+    submitBtn.append(templates.addLoader());
 
     try { 
         const response = await fetch(url, data);
@@ -21,13 +24,11 @@ export async function createListing(formInfo){
         console.log(json);
         
         if(response.ok){
-            const submitBtn = document.querySelector("#submitBtn");
-            submitBtn.innerHTML = "";
-            submitBtn.append(templates.addLoader());
             window.location.replace("/");
         } else {
             const errorMessage = document.querySelector("#errorTag");
             errorMessage.innerText = json.errors[0].message;
+            submitBtn.innerHTML = "Create";
         }
     } catch (error) {
         
