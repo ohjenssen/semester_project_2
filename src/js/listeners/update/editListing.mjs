@@ -10,8 +10,7 @@ export async function editListing(){
             event.preventDefault();
             const formData = new FormData(event.target);
             const editInfo = Object.fromEntries(formData.entries());
-
-            const tagsArr = editInfo.tags.split(" ");
+            
             let mediaArr = editInfo.media.split(" ");
 
             editInfo.tags = editInfo.tags.split(" ");
