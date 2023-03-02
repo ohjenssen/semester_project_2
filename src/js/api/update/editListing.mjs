@@ -28,6 +28,9 @@ export async function editListing(body){
             submitBtn.innerHTML = "";
             submitBtn.append(templates.addLoader());
             window.location.replace(`/pages/listing/?id=${id}`);
+        } else {
+            const errorMessage = document.querySelector("#errorTag");
+            errorMessage.innerText = json.errors[0].message;
         }
 
     } catch(error) {

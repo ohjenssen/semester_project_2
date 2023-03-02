@@ -25,6 +25,9 @@ export async function createListing(formInfo){
             submitBtn.innerHTML = "";
             submitBtn.append(templates.addLoader());
             window.location.replace("/");
+        } else {
+            const errorMessage = document.querySelector("#errorTag");
+            errorMessage.innerText = json.errors[0].message;
         }
     } catch (error) {
         
