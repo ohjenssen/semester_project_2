@@ -32,3 +32,29 @@
   width: 100%;
   height: 100%;
 }
+
+
+// Custom modal for gallery images
+.galleryModal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.gm {
+  margin: auto auto;
+}
+
+.modalImage{
+  background-color: #62748C;
+  padding: 10px;
+  max-width: 340px;
+  max-height: 340px;
+}

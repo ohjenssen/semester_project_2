@@ -1,4 +1,5 @@
 import { deleteModal } from "./modal.mjs";
+import { galleryImage } from "./mediaGallery.mjs";
 import * as storage from "../localStorage/index.mjs";
 import * as api from "../api/index.mjs";
 
@@ -171,6 +172,13 @@ export function singeListing(listing){
                                             <ul class="list-group list-group-flush">
                                             </ul>
                                         </div>
+                                        <div class="container mt-4">
+                                            <h1 class="fw-light text-center text-lg-start mb-0">Media Gallery</h1>
+                                            <hr class="mt-2 mb-5">
+                                            <div id="galleryContainer" class="row text-center text-lg-start">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>`;
 
@@ -181,6 +189,31 @@ export function singeListing(listing){
     } else {
         divContainer.querySelector("#listingImage").src = "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930";
     };
+
+    const modalContainer = document.querySelector(".modalContainer");
+
+    for (let i = 0; i < listing.media.length; i++){
+        const galleryImg = galleryImage(listing.media[i]);
+        divContainer.querySelector("#galleryContainer").append(galleryImg);
+        galleryImg.addEventListener("click", (event) => {
+            console.log(event.target.src);
+            modalContainer.innerHTML = `<div class="galleryModal">
+                                            <div class="gm">
+                                                <img src="${event.target.src}" class="modalImage">
+                                            <div>
+                                        </div>`;
+
+            const galleryModal = document.querySelector(".galleryModal");
+            galleryModal.style.display = "flex";
+
+            function exitModal(){
+                galleryModal.style.display = "none";
+                modalContainer.innerHTML = "";
+            }
+                    
+            galleryModal.addEventListener("click", exitModal);
+        })
+    }
 
     if(listing.description){
         divContainer.querySelector("#description").innerText = listing.description;
