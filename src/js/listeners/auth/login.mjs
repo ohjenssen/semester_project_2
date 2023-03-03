@@ -1,5 +1,9 @@
 import * as authenticate from "../../api/index.mjs";
 
+/**
+ * Selects the loginform and adds an eventlistener.
+ * Uses the data from the form as an argument to loginUser function.
+ */
 export function setLoginFormListener(){
     
     const form = document.querySelector("#loginForm");

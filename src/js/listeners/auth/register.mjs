@@ -1,7 +1,10 @@
 import * as authenticate from "../../api/index.mjs";
 
+/**
+ * Selects the registerform and adds an eventlistener.
+ * Uses the data from the form as an argument to register function.
+ */
 export function setRegisterFormListener(){
-
     const form = document.querySelector("#registerForm");
 
     if(form){

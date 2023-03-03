@@ -1,5 +1,8 @@
 import * as api from "../../api/index.mjs";
 
+/**
+ * Adds an eventlistener to the avatarform and calls upon the api when submitted.
+ */
 export function changeAvatar(){
     const form = document.querySelector("#changeAvatarForm");
 

@@ -1,4 +1,27 @@
+/**
+ * Sets innertext of HTML elements
+ * @param {string} name 
+ * @param {string} email 
+ * @param {string} avatar 
+ * @param {number} credits 
+ * @param {array} wins 
+ * 
+ * @example
+ * ```
+ * const name = "John";
+ * const email = "john@stud.noroff.no";
+ * const avatar = "imageurl.com";
+ * const credits = 1000;
+ * const wins = ["122445eb-23t3e-2r1e2"];
+ * renderProfile(name, email, avatar, credits, wins)
+ * ```
+ */
 export function renderProfile(name, email, avatar, credits, wins){
+    console.log(name);
+    console.log(email);
+    console.log(avatar);
+    console.log(credits);
+    console.log(wins);
     const nameContainer = document.querySelector("#profileName");
     const avatarContainer = document.querySelector("#avatarImg");
     const emailContainer = document.querySelector("#email");

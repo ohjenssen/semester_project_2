@@ -1,8 +1,13 @@
 import * as templates from "../../templates/index.mjs";
 import * as api from "../../api/index.mjs";
 
+/**
+ * Prefills the form with listing info, and adds an eventlistener to the form
+ * that calls on the edit api.
+ */
 export async function editListing(){
-    templates.preFillForm();
+    const listing = await api.getSingleListing();
+    templates.preFillForm(listing);
     const form = document.querySelector("#editListing");
 
     if(form){
@@ -11,14 +16,12 @@ export async function editListing(){
             const formData = new FormData(event.target);
             const editInfo = Object.fromEntries(formData.entries());
             
-            let mediaArr = editInfo.media.split(" ");
-
+            editInfo.media = editInfo.media.split(" ");
             editInfo.tags = editInfo.tags.split(" ");
-            editInfo.media = mediaArr;
+
             if(editInfo.media[0] === ""){
                 editInfo.media = "";
             };
-            console.log(editInfo);
             api.editListing(editInfo);
         })
     }

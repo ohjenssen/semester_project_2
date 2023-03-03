@@ -1,6 +1,10 @@
 import * as templates from "../../templates/index.mjs";
 import * as api from "../../api/index.mjs";
 
+/**
+ * Fetches the profile page and puts the object returned into a function that renders.
+ * If the profile avatar does not exist, meaning that the user never set an avatar, then a default avatar is set.
+ */
 export async function setProfilePage(){
     const profile = await api.getUserProfile();
 

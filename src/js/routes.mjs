@@ -1,5 +1,9 @@
 import * as listeners from "./listeners/index.mjs";
 
+/**
+ * Sets the correct listeners in teh right page.
+ * @param {string} path Path name in url
+ */
 export function setRoute(path){
     switch(path){
         case "/pages/register/":

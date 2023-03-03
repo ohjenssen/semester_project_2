@@ -2,14 +2,26 @@ import { api_urls } from "../constants.mjs";
 import * as components from "../../components/index.mjs";
 import * as storage from "../../localStorage/index.mjs";
 
-const data = { 
-    method: "GET",
-    headers: {
-        "Authorization": `Bearer ${storage.getAccessToken()}`,
-        "Content-type": "application/json; charset=UTF-8"
-}}
+
+/**
+ * 
+ * @param {string} profileName Variable to be used for the profile pages.
+ * @example
+ * ```
+ * const name = "johnDoe";
+ * getListings(name);
+ * ```
+ * @returns {array} Array of objects containing all listings by different profiles.
+ */
 
 export async function getListings(profileName){
+    const data = { 
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${storage.getAccessToken()}`,
+            "Content-type": "application/json; charset=UTF-8"
+    }}
+
     let url = api_urls.base;
     const path = location.pathname;
     

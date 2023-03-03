@@ -1,5 +1,11 @@
 import * as api from "../api/index.mjs";
 
+/**
+ * Function that creates a modal for each listing on the uuser profile.
+ * Also adds an eventlistener that calls on the delete api, deleting the post.
+ * @param {number} id Listing id to be used in the modal id
+ * @returns Div element that gets appended to the body.
+ */
 export function deleteModal(id){
     const modal = document.createElement("div");
     modal.className = "modal text-dark-blue";

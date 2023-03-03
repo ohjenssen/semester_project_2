@@ -2,11 +2,25 @@ import { api_urls } from "../constants.mjs";
 import * as templates from "../../templates/index.mjs";
 import * as storage from "../../localStorage/index.mjs";
 
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
-
+/**
+ * 
+ * @param {object} body Object containing names and values to be used in the call.
+ * Function that updates the selected listing with new information.
+ * @example
+ * ```
+ * const newInfo = {    
+*                       title: "New title", 
+*                       description: "Forgot to mention this about the listing", 
+                        tags: ["awesome", "new"], 
+                        media: ["originalImage.url", "addedSecondImage.url"] 
+                    };
+ * editListing(newInfo);
+ * ```
+ */
 export async function editListing(body){
+    const queryString = window.location.search;
+    const params = new URLSearchParams(queryString);
+    const id = params.get("id");
 
     const data = { 
         method: "PUT",

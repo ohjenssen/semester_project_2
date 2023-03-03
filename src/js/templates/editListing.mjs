@@ -1,7 +1,13 @@
-import * as api from "../api/index.mjs";
-
-export async function preFillForm(){
-    const listing = await api.getSingleListing();
+/**
+ * Fills the form with information from the relevant listing.
+ * @param {object} listing Object containing names and values from the listing.
+ * @example
+ * ```
+ * const listingObj = { title: "Apple", description: "A delicious apple!", media: ["appleImage.url"], tags: ["art", "apple"] };
+ * preFillForm(listingObj);
+ * ```
+ */
+export async function preFillForm(listing){
     const editListingForm = document.querySelector("#editListing");
     editListingForm.querySelector("#title").value = listing.title;
     editListingForm.querySelector("#description").value = listing.description;

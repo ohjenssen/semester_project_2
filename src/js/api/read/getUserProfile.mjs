@@ -1,6 +1,10 @@
 import { api_urls } from "../constants.mjs";
 import * as storage from "../../localStorage/index.mjs";
 
+/**
+ * Function fethcing a user profile using the name provided in the url parameter.
+ * @returns {object} Object containing names and values for the user profile.
+ */
 export async function getUserProfile(){
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);

@@ -1,8 +1,25 @@
 import { api_urls } from "../constants.mjs";
-import * as components from "../../components/index.mjs";
 import * as templates from "../../templates/index.mjs";
 
+/**
+ * 
+ * @param {object} profileData Object from the form to be used in the body.
+ * After the call is executed it should store profileinformation along with the accesstoken.
+ * @example
+ * ```
+ * const profile = { email: 'johndoe@stud.noroff.no', password: 'pass123' };
+ * loginUser(profile);
+ * ```
+ */
 export async function loginUser(profileData){
+    const data = {
+                method: "POST",
+                body: JSON.stringify(profileData),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+    }
+
     const loginUrl = api_urls.base + api_urls.login;
     const loginBtn = document.querySelector("#loginBtn");
 
@@ -10,13 +27,7 @@ export async function loginUser(profileData){
     loginBtn.append(templates.addLoader());
     
     try {
-            const response = await fetch(loginUrl, {
-                method: "POST",
-                body: JSON.stringify(profileData),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
-                }
-            })
+            const response = await fetch(loginUrl, data)
             const json = await response.json();
             
             if(response.ok){

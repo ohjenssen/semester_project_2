@@ -1,6 +1,16 @@
 import { api_urls } from "../constants.mjs";
 import * as templates from "../../templates/index.mjs";
 
+
+/**
+ * 
+ * @param {object} profileData Object from the form to be used in the body.
+ * If the response is ok, user is redirected to the login page.
+ * ```
+ * const profile = { name: 'johndoe', email:, 'johndoe@stud.noroff.no', password: 'pass123', avatar: 'urlImageLink.url', banner: 'urlImageLink.url };
+ * loginUser(profile);
+ * ```
+ */
 export async function registerUser(profileData){
     const registerUrl = api_urls.base + api_urls.register;
     const registerBtn = document.querySelector("#registerBtn");
