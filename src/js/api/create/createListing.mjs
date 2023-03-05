@@ -40,7 +40,7 @@ export async function createListing(formInfo){
             errorMessage.innerText = json.errors[0].message;
             submitBtn.innerHTML = "Create";
         }
-    } catch (error) {
-        console.log(error);
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
 };

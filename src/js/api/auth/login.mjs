@@ -42,6 +42,6 @@ export async function loginUser(profileData){
                 pTag.innerHTML = errorMessage;
             }
     } catch(error) {
-        console.log(error);
+        window.location.replace("/pages/errorPage/");
     }
 }

@@ -6,20 +6,24 @@ import * as storage from "../../localStorage/index.mjs";
  * @returns {object} Object containing names and values for the user profile.
  */
 export async function getUserProfile(){
+    const data = {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${storage.getAccessToken()}`,
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    };
     const queryString = window.location.search;
     const params = new URLSearchParams(queryString);
     const name = params.get("name");
 
     const profileUrl = `${api_urls.base}${api_urls.profile}${name}?_listings=true`;
 
-    const response = await fetch(profileUrl, {
-        method: "GET",
-        headers: {
-            "Authorization": `Bearer ${storage.getAccessToken()}`,
-            "Content-type": "application/json; charset=UTF-8"
-        }
-    })
-
-    const json = await response.json();
-    return json;
+    try {
+        const response = await fetch(profileUrl, data);
+        const json = await response.json();
+        return json;
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
+    }
 }

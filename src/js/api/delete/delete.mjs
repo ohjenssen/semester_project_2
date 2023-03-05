@@ -22,9 +22,14 @@ export async function deleteListing(id){
         }
     }
 
-    const response = await fetch(url, data);
-    if(response.ok){
-        window.location.reload();
+
+    try {
+        const response = await fetch(url, data);
+        if(response.ok){
+            window.location.reload();
+        }
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
 
 }

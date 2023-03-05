@@ -107,6 +107,10 @@ footer .logo {
   max-width: 150px;
 }
 
+#error {
+  height: 90vh;
+}
+
 header .logo {
   width: 250px;
 }

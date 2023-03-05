@@ -20,10 +20,14 @@ export async function getSingleListing(){
 
     const url =`${api_urls.base}${api_urls.listings}/${id}?_seller=true&_bids=true`;
 
-    const response = await fetch(url, data);
-    if(response.ok){
-        components.removeLoader();
+    try {
+        const response = await fetch(url, data);
+        if(response.ok){
+            components.removeLoader();
+        }
+        const json = await response.json();
+        return json;
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
-    const json = await response.json();
-    return json;
 };

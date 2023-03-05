@@ -39,8 +39,8 @@ export async function editAvatar(formData){
             errorTag.innerText = json.errors[0].message;
         }
 
-    } catch (error){
-        console.log(error);
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
 
 

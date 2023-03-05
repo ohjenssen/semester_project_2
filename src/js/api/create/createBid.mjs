@@ -28,15 +28,18 @@ export async function createBid(amount){
     
     const url = `${api_urls.base}${api_urls.listings}/${id}/bids`;
 
-    const response = await fetch(url, data)
-    const json = await response.json();
+    try {
+        const response = await fetch(url, data);
+        const json = await response.json();
 
-    if(response.ok){
-        location.reload();
-    } else {
-        const errorMessage = await json.errors[0].message;
-        const pTag = document.querySelector("#errorTag");
-        pTag.innerText = errorMessage;
+        if(response.ok){
+            location.reload();
+        } else {
+            const errorMessage = await json.errors[0].message;
+            const pTag = document.querySelector("#errorTag");
+            pTag.innerText = errorMessage;
+        }
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
-
 }

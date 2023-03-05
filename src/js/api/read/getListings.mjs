@@ -52,10 +52,14 @@ export async function getListings(profileName){
 
     }
 
-    const response = await fetch(url, data);
-    if(response.ok){
-        components.removeLoader();
+    try {
+        const response = await fetch(url, data);
+        if(response.ok){
+            components.removeLoader();
+        }
+        const json = await response.json();
+        return json;
+    } catch(error) {
+        window.location.replace("/pages/errorPage/");
     }
-    const json = await response.json();
-    return json;
 }

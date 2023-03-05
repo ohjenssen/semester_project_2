@@ -49,9 +49,6 @@ export async function editListing(body){
         }
 
     } catch(error) {
-        console.log(error);
+        window.location.replace("/pages/errorPage/");
     }
-
-
-
 }
