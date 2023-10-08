@@ -2,7 +2,7 @@
 
 <img width="800" alt="semesterProject_landingPage" src="https://github.com/ohjenssen/semester_project_2/assets/95288100/5d35c0c2-5c2e-4c4d-8101-ecab73bef95c">
 
-## Desscription
+## Description
 ```
 ### Goal
 To take the skills learned over the past three semesters and create an auction website.
